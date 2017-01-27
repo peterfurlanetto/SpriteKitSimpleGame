@@ -65,12 +65,12 @@
 			children = (
 				FE7457FD1E39359C00B1A0A3 /* AppDelegate.swift */,
 				FE7458031E39359C00B1A0A3 /* GameScene.swift */,
+				FEF5003F1E3B29160052BFC9 /* GameOverScene.swift */,
 				FE7458051E39359C00B1A0A3 /* GameViewController.swift */,
 				FE7458071E39359C00B1A0A3 /* Main.storyboard */,
 				FE74580A1E39359C00B1A0A3 /* Assets.xcassets */,
 				FE74580C1E39359C00B1A0A3 /* LaunchScreen.storyboard */,
 				FE74580F1E39359C00B1A0A3 /* Info.plist */,
-				FEF5003F1E3B29160052BFC9 /* GameOverScene.swift */,
 			);
 			path = SpriteKitSimpleGame;
 			sourceTree = "<group>";
