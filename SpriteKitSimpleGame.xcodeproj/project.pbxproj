@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		FE45E5B31E3D3777000F73A7 /* GameStartScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStartScene.swift; sourceTree = "<group>"; };
-		FE7457FA1E39359C00B1A0A3 /* SpriteKitSimpleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitSimpleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE7457FA1E39359C00B1A0A3 /* Ghost Slayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ghost Slayer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7457FD1E39359C00B1A0A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE7458031E39359C00B1A0A3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		FE7458051E39359C00B1A0A3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		FE7457FB1E39359C00B1A0A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FE7457FA1E39359C00B1A0A3 /* SpriteKitSimpleGame.app */,
+				FE7457FA1E39359C00B1A0A3 /* Ghost Slayer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,7 +105,7 @@
 			);
 			name = SpriteKitSimpleGame;
 			productName = SpriteKitSimpleGame;
-			productReference = FE7457FA1E39359C00B1A0A3 /* SpriteKitSimpleGame.app */;
+			productReference = FE7457FA1E39359C00B1A0A3 /* Ghost Slayer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -292,7 +292,7 @@
 				INFOPLIST_FILE = SpriteKitSimpleGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.petorius.SpriteKitSimpleGame;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ghost Slayer";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -305,7 +305,7 @@
 				INFOPLIST_FILE = SpriteKitSimpleGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.petorius.SpriteKitSimpleGame;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ghost Slayer";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
