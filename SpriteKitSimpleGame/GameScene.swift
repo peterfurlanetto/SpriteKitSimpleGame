@@ -57,13 +57,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let monsterSpawnWait = 1.0
     let monsterSpeedMin = 2.0
     let monsterSpeedMax = 4.0
+    var killScore = 0
+    let killScoreLabel = SKLabelNode(fontNamed: "Chalkduster")
     
     var monstersDestroyed = 0
     
     override func didMove(to view: SKView) {
         // 2
         backgroundColor = SKColor.cyan
-        //setupScoreboard()
+        setupScoreboard()
         // 3
         player.position = CGPoint(x: size.width * 0.05, y: size.height * 0.5)
         // 4
@@ -174,6 +176,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {
         print("Hit")
+        killScore += 1
+        killScoreLabel.text = String(killScore)
         projectile.removeFromParent()
         monster.removeFromParent()
         monstersDestroyed += 1
@@ -213,15 +217,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func setupScoreboard() {
-        // 2
-        //let message = won ? "You Won!" : "You SUCK!!!"
         
-        // 3
-        //let hitLabel = SKLabelNode(fontNamed: "Chalkduster")
-        //hitLabel.text = message
-        //hitLabel.fontSize = 40
-        //hitLabel.fontColor = SKColor.black
-        //hitLabel.position = CGPoint(x: size.width/2, y: size.height/2)
-        //addChild(hitLabel)
+        let killLabel = SKLabelNode(fontNamed: "Chalkduster")
+        killLabel.text = "Kills"
+        killLabel.fontSize = 12
+        killLabel.fontColor = SKColor.red
+        killLabel.position = CGPoint(x: size.width * 0.9, y: size.height * 0.95)
+        addChild(killLabel)
+        
+        killScoreLabel.text = String(killScore)
+        killScoreLabel.fontSize = 12
+        killScoreLabel.fontColor = SKColor.red
+        killScoreLabel.position = CGPoint(x: size.width * 0.95, y: size.height * 0.95)
+        addChild(killScoreLabel)
+        
     }
 }
