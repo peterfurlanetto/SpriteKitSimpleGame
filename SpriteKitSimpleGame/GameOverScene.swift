@@ -9,17 +9,14 @@
 import Foundation
 import SpriteKit
 
-class GameOverScene: SKScene {
+class GameOverScene: TuckFrumpScene {
     
     init(size: CGSize, won:Bool) {
         
         super.init(size: size)
         
-        // 1
-        backgroundColor = SKColor.cyan
-        
         // 2
-        let outcomeMessage = won ? "You Won!" : "You SUCK!!!"
+        let outcomeMessage = won ? "You Won Bigly" : "You're Fired!"
         
         // 3
         let outcomeLabel = SKLabelNode(fontNamed: "Chalkduster")
@@ -29,7 +26,7 @@ class GameOverScene: SKScene {
         outcomeLabel.position = CGPoint(x: size.width/2, y: size.height/2)
         addChild(outcomeLabel)
         
-        let playAgainMessage = won ? "tap to play again!" : "tap to LOSE again! ;-P"
+        let playAgainMessage = won ? "Tap to make America great again!" : "Tap to play again, Loser"
         
         let playLabel = SKLabelNode(fontNamed: "Chalkduster")
         playLabel.text = playAgainMessage

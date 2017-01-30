@@ -47,7 +47,7 @@ extension CGPoint {
     }
 }
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class GameScene: TuckFrumpScene, SKPhysicsContactDelegate {
     
     // 1 Constants
     let player = SKSpriteNode(imageNamed: "player")
@@ -67,7 +67,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         backgroundColor = SKColor.cyan
         setupScoreboard()
         // 3
-        player.position = CGPoint(x: size.width * 0.05, y: size.height * 0.5)
+        player.position = CGPoint(x: size.width * 0.15, y: size.height * 0.5)
         // 4
         addChild(player)
         
@@ -77,7 +77,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         run(SKAction.repeatForever(
             SKAction.sequence([
                 SKAction.run(addMonster),
-                SKAction.wait(forDuration: monsterSpawnWait)
+                SKAction.wait(forDuration: Double(arc4random()) / 0xFFFFFFFF)
             ])
         ))
         

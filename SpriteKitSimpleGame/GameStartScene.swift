@@ -9,32 +9,31 @@
 import Foundation
 import SpriteKit
 
-class GameStartScene: SKScene {
+class GameStartScene: TuckFrumpScene {
     
     override init(size: CGSize) {
         
         super.init(size: size)
         
-        isUserInteractionEnabled = true
-        
-        // 1
-        backgroundColor = SKColor.cyan
-        
         // 3
         let titleLabel = SKLabelNode(fontNamed: "Chalkduster")
-        titleLabel.text = "Ghost Slayer"
+        titleLabel.text = "Tuck Frump"
         titleLabel.fontSize = 40
         titleLabel.fontColor = SKColor.black
         titleLabel.position = CGPoint(x: size.width/2, y: size.height/2)
         addChild(titleLabel)
         
         let playLabel = SKLabelNode(fontNamed: "Chalkduster")
-        playLabel.text = "tap to play!"
-        playLabel.fontSize = 18
+        playLabel.text = "tap to make America Great Again!"
+        playLabel.fontSize = 14
         playLabel.fontColor = SKColor.black
         playLabel.position = CGPoint(x: size.width/2, y: size.height/2*0.8)
         addChild(playLabel)
         
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -48,8 +47,4 @@ class GameStartScene: SKScene {
 
     }
     
-    // 6
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
