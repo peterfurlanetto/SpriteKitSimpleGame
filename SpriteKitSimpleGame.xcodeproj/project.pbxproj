@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FE2F38071E3F23CE00DF98CE /* TuckFrumpScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2F38061E3F23CE00DF98CE /* TuckFrumpScene.swift */; };
+		FE2F38091E40685C00DF98CE /* splat_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FE2F38081E40685C00DF98CE /* splat_sound.mp3 */; };
 		FE45E5B41E3D3777000F73A7 /* GameStartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45E5B31E3D3777000F73A7 /* GameStartScene.swift */; };
 		FE7457FE1E39359C00B1A0A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7457FD1E39359C00B1A0A3 /* AppDelegate.swift */; };
 		FE7458041E39359C00B1A0A3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7458031E39359C00B1A0A3 /* GameScene.swift */; };
@@ -16,12 +17,12 @@
 		FE74580B1E39359C00B1A0A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE74580A1E39359C00B1A0A3 /* Assets.xcassets */; };
 		FE74580E1E39359C00B1A0A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE74580C1E39359C00B1A0A3 /* LaunchScreen.storyboard */; };
 		FE8BF9D01E3B2C8300329D5D /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = FE8BF9CE1E3B2C8300329D5D /* background-music-aac.caf */; };
-		FE8BF9D11E3B2C8300329D5D /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = FE8BF9CF1E3B2C8300329D5D /* pew-pew-lei.caf */; };
 		FEF500401E3B29160052BFC9 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF5003F1E3B29160052BFC9 /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FE2F38061E3F23CE00DF98CE /* TuckFrumpScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuckFrumpScene.swift; sourceTree = "<group>"; };
+		FE2F38081E40685C00DF98CE /* splat_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = splat_sound.mp3; sourceTree = "<group>"; };
 		FE45E5B31E3D3777000F73A7 /* GameStartScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStartScene.swift; sourceTree = "<group>"; };
 		FE7457FA1E39359C00B1A0A3 /* Tuck Frump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tuck Frump.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7457FD1E39359C00B1A0A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +33,6 @@
 		FE74580D1E39359C00B1A0A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE74580F1E39359C00B1A0A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE8BF9CE1E3B2C8300329D5D /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
-		FE8BF9CF1E3B2C8300329D5D /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		FEF5003F1E3B29160052BFC9 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,8 +84,8 @@
 		FE8BF9CD1E3B2C8300329D5D /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				FE2F38081E40685C00DF98CE /* splat_sound.mp3 */,
 				FE8BF9CE1E3B2C8300329D5D /* background-music-aac.caf */,
-				FE8BF9CF1E3B2C8300329D5D /* pew-pew-lei.caf */,
 			);
 			name = Sounds;
 			path = SpriteKitSimpleGame/Sounds;
@@ -151,10 +151,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE8BF9D11E3B2C8300329D5D /* pew-pew-lei.caf in Resources */,
 				FE7458091E39359C00B1A0A3 /* Main.storyboard in Resources */,
 				FE8BF9D01E3B2C8300329D5D /* background-music-aac.caf in Resources */,
 				FE74580B1E39359C00B1A0A3 /* Assets.xcassets in Resources */,
+				FE2F38091E40685C00DF98CE /* splat_sound.mp3 in Resources */,
 				FE74580E1E39359C00B1A0A3 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

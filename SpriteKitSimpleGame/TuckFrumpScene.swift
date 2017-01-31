@@ -18,7 +18,7 @@ class TuckFrumpScene: SKScene {
         isUserInteractionEnabled = true
         
         // 1
-        backgroundColor = SKColor.white
+        backgroundColor = SKColor.orange
     }
     
     // 6

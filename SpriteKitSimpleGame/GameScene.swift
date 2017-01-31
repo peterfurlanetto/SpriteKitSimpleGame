@@ -51,23 +51,22 @@ class GameScene: TuckFrumpScene, SKPhysicsContactDelegate {
     
     // 1 Constants
     let player = SKSpriteNode(imageNamed: "player")
-    let monstersToKill = 30
+    let trumpsToFeed = 30
     let transitionDuration = 0.5
     let projectileActionDuration = 1.0
     let monsterSpawnWait = 1.0
     let monsterSpeedMin = 2.0
     let monsterSpeedMax = 4.0
-    var killScore = 0
-    let killScoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+    var trumpsFedCount = 0
+    let trumpsFedCountLabel = SKLabelNode(fontNamed: "Chalkduster")
     
     var monstersDestroyed = 0
     
     override func didMove(to view: SKView) {
-        // 2
-        backgroundColor = SKColor.cyan
+
         setupScoreboard()
         // 3
-        player.position = CGPoint(x: size.width * 0.15, y: size.height * 0.5)
+        player.position = CGPoint(x: size.width * 0.08, y: size.height * 0.5)
         // 4
         addChild(player)
         
@@ -153,8 +152,6 @@ class GameScene: TuckFrumpScene, SKPhysicsContactDelegate {
         // 4 - Bail out if you are shooting down or backwards
         if (offset.x < 0) { return }
         
-        run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
-        
         // 5 - OK to add now - you've double checked position
         addChild(projectile)
         
@@ -176,12 +173,13 @@ class GameScene: TuckFrumpScene, SKPhysicsContactDelegate {
     
     func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {
         print("Hit")
-        killScore += 1
-        killScoreLabel.text = String(killScore)
+        run(SKAction.playSoundFileNamed("splat_sound.mp3", waitForCompletion: false))
+        trumpsFedCount += 1
+        trumpsFedCountLabel.text = String(trumpsFedCount)
         projectile.removeFromParent()
         monster.removeFromParent()
         monstersDestroyed += 1
-        if (monstersDestroyed == monstersToKill) {
+        if (monstersDestroyed == trumpsToFeed) {
             self.presentGameOverScene(won: true)
         }
     }
@@ -219,17 +217,17 @@ class GameScene: TuckFrumpScene, SKPhysicsContactDelegate {
     func setupScoreboard() {
         
         let killLabel = SKLabelNode(fontNamed: "Chalkduster")
-        killLabel.text = "Kills"
+        killLabel.text = "Fed"
         killLabel.fontSize = 12
-        killLabel.fontColor = SKColor.red
+        killLabel.fontColor = SKColor.black
         killLabel.position = CGPoint(x: size.width * 0.9, y: size.height * 0.95)
         addChild(killLabel)
         
-        killScoreLabel.text = String(killScore)
-        killScoreLabel.fontSize = 12
-        killScoreLabel.fontColor = SKColor.red
-        killScoreLabel.position = CGPoint(x: size.width * 0.95, y: size.height * 0.95)
-        addChild(killScoreLabel)
+        trumpsFedCountLabel.text = String(trumpsFedCount)
+        trumpsFedCountLabel.fontSize = 12
+        trumpsFedCountLabel.fontColor = SKColor.black
+        trumpsFedCountLabel.position = CGPoint(x: size.width * 0.95, y: size.height * 0.95)
+        addChild(trumpsFedCountLabel)
         
     }
 }
